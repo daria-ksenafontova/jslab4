@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+			<title>Лабораторная работа №4 Ксенафонтова</title>
+				<style>
+				h1 {color:red;text-align:center;}
+				body {background-color:PaleGreen; font-weight:bold;}
+				input {font-weight:bold;}
+				</style>
+					<script>
+					function hello()
+					{ 
+					var r=document.getElementById('surname').value; // переменная р объект текстовое поле
+					var n=document.getElementById('name').value;
+					var o=document.getElementById('grandname').value;					
+					var g=document.getElementById('god').value;					
+					var m=document.getElementById('mesto').value;					
+					var h=document.getElementById('hobby').value;					
+					var l=document.getElementById('nolike').value;					
+						var win=window.open("","","width=600,height=700"); // переменная win экземпляр объекта window,создается пустое окно	
+						win.document.open();  // открываем запись в это окно - объект win
+						str = "<h1> О себе </h1><hr><P>";
+						win.document.write(str);  // вывод строки в документ окна win
+						str = '<p> Я, '+r+' '+n+' '+o+' родился в '+g+' '+' году в городе '+m+'.</p>';
+						win.document.write(str);
+						str = '<p> Больше всего я люблю '+h+' '+'и очень не люблю '+l+'. Было бы замечательно, всю жизнь только '+h+', но к сожалению приходится иногда и '+l+ '.</p>';
+						win.document.write(str); 
+						str ='<input type="button" value="Закрыть"'   // формирование и вывод кнопки закрытия
+						+'onClick="window.close();">';
+						win.document.write(str);  // закрываем вывод в документ объекта win
+						win.document.close();
+						}
+					</script>
+	</head>
+			<body>
+			<h1>Анкета</h1>
+			<hr> 
+				<form align=center>
+			   <b>Фамилия:</b>
+               <p><input type="text" value="Горбунков" id='surname'></p>
+			   <b>Имя:</b>
+               <p><input  type="text" value="Семен" id='name'></p>
+			   <b>Отчество:</b>
+               <p><input type="text" value="Семенович" id='grandname'></p>
+			   <b>Год рождения:</b>
+               <p><input type="text" value="1990" id='god'></p>
+			   <b>Место рождения:</b>
+               <p><input  type="text" value="Одесса" id='mesto'></p>
+			   <b>Любимое занятие:</b>
+               <p><input type="text" value="читать" id='hobby'></p>
+			   <b>Не любимое занятие:</b>
+               <p><input type="text" value="мыть посуду" id='nolike'></p> <br>
+					<input type=button value="Сформировать биографию" OnClick="hello()">
+			</hr>	
+				</form>
+			</body>
+</html>
+			
+	
