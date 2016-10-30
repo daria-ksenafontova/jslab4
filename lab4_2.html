@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+			<title>Лабораторная работа №4 Ксенафонтова</title>
+				<style>
+				h1 {color:red;text-align:center;}
+				body {background-color:PaleGreen; font-weight:bold;}
+				input {font-weight:bold;}
+				</style>
+					<script>
+					function hello()
+					{ 
+					var n=document.getElementById('name').value; 
+					var h=document.getElementById('hobby').value;
+					var f=document.getElementById('friend').value;					
+					var p=document.getElementById('happy').value;									
+						var win=window.open("","","width=600,height=700"); 
+						win.document.open(); 
+						str = "<h1> Пташка и цветы </h1><hr><p>";
+						win.document.write(str); 
+						str = '<p> В одном лесу жила маленькая '+n+', которая очень любила '+h+' чудесные песни. У неё так хорошо получалось, что весь лес собирался послушать её! От сороки она узнала, что у людей принято дарить '+p+' любимым исполнителям. А '+p+' она любила так же сильно, как и '+h+'. Долго грустила '+n+'. Но однажды, после очередного импровизированного концерта, '+f+' подлетел к '+n+' и подарил ей... '+p+'! Уж он то был истинным джентельменом! '+n+' была невероятно счастлива!!!'+'</p>';
+						win.document.write(str); 
+						str ='<input type="button" value="Закрыть"' 
+						+'onClick="window.close();">';
+						win.document.write(str); 
+						win.document.close();
+						}
+					</script>
+	</head>
+			<body>
+			<h1>Генератор сказок</h1>
+			<hr> 
+				<form align=center>
+			   <b>Имя героя:</b>
+               <p><input type="text" value="пташка" id='name'></p>
+			   <b>Любимое занятие:</b>
+               <p><input  type="text" value="петь" id='hobby'></p>
+			   <b>Друг героя:</b>
+               <p><input type="text" value="дятел" id='friend'></p>
+			   <b>Любимый подарок:</b>
+               <p><input type="text" value="цветы" id='happy'></p>
+			   <br>
+				<input type=button value="Сгенерировать сказку" OnClick="hello()">
+			</hr>	
+				</form>
+			</body>
+</html>
+			
+	
